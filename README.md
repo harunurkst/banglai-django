@@ -1,2 +1,2 @@
-#banglai-Django
+#Banglai-Django
 Django Tutorial in Bangla

@@ -1,0 +1,17 @@
+<html>
+<head>
+    {%  load staticfiles %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>স্বাগতম বাংলায় জ্যাঙ্গো টিউটোরিয়াল এ </h1>
+<ul>
+    <h2>সকল পোষ্ট তালিকা </h2>
+    {% for post in post_list %}
+        <li>{{ post.title }}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

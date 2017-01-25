@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body>
+    <h1>স্বাগতম বাংলায় জ্যাঙ্গো টিউটোরিয়াল এর প্রথম টেমপ্লেট এ </h1>
+
+{% for post in all_post_list %}
+
+    <h1>{{ post.title }}</h1>
+    <hr>
+    <p>{{  post.description }}</p>
+{% endfor %}
+</body>
+</html>

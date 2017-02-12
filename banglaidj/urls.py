@@ -20,5 +20,6 @@ from blog_post import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', views.home, name='home'),
-    url(r'^post-list/', views.post_list, name='post-list')
+    url(r'^post-list/', views.post_list, name='post-list'),
+    url(r'^single-post/(?P<post_id>[0-9]+)/', views.single_post, name='single-post')
 ]

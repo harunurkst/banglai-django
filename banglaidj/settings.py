@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog_post',
+    'cost_management',
 ]
 
 MIDDLEWARE_CLASSES = [

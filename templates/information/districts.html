@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>বাংলাদেশের জেলাসমূহ</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>নাম</th>
+            <th>বিভাগ</th>
+            <th>শিক্ষার হার</th>
+            <th>জনসংখ্যার হার </th>
+            <th>ভ্রমন করেছেন ? </th>
+        </tr>
+        {% for district in districts %}
+            <tr>
+                <td>{{ district.name }}</td>
+                <td>{{ district.division }}</td>
+                <td>{{ district.education_rate }}</td>
+                <td>{{ district.population_density }}</td>
+                <td>{{ district.visited }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from . import views
+from custom_admin import views as custom_admin_views
 
 urlpatterns = [
+    url(r'^admin/myview$', custom_admin_views.myview, name='custom-view'),
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', views.user_login, name='login'),
     url(r'^logout/$', views.user_logout, name='logout'),

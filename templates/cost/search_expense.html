@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>খরচ খুজুন </h1>
+
+<form action="/cost/search/" method="post">
+        {% csrf_token %}
+        <input type="text" name="field_one">
+        <input type="submit" value="Submit">
+
+</form>
+
+{% endblock %}

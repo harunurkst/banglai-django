@@ -37,3 +37,9 @@ def delete_expense(request, expense_id):
     expense = Expense.objects.get(id=expense_id)
     expense.delete()
     return redirect('cost-list')
+
+
+def search_expense(request):
+    print("request data: ", request.POST)
+    context = {}
+    return render(request, 'cost/search_expense.html', context)

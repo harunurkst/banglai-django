@@ -15,7 +15,7 @@ class Districts(models.Model):
     education_rate = models.IntegerField()
     population_density = models.IntegerField(blank=True, null=True)
     visited = models.BooleanField(default=False)
-    division = models.ForeignKey(Divisions)
+    division = models.ForeignKey(Divisions, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

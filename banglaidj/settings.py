@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blog_post',
     'cost_management',
     'information',
+    'info',
+    'inventory'
 ]
 
 MIDDLEWARE_CLASSES = [

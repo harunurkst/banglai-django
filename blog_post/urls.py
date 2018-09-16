@@ -1,8 +1,8 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    url(r'^home/', views.home, name='blog-home'),
-    url(r'^post-list/', views.post_list, name='post-list'),
-    url(r'^single-post/(?P<post_id>[0-9]+)/', views.single_post, name='single-post')
+    path('home/', views.home, name='blog-home'),
+    path('post-list/', views.post_list, name='post-list'),
+    path('single-post/<int:post_id>', views.single_post, name='single-post')
 ]

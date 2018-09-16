@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    url(r'^districts/', views.district_list, name='districts'),
+    path('districts/', views.district_list, name='districts'),
 
 ]

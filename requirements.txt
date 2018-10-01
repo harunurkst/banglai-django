@@ -1,6 +1,6 @@
 appdirs==1.4.3
 packaging==17.1
-Django==2.0.3
+Django==2.1.2
 pyparsing==2.1.10
 six==1.11.0
 

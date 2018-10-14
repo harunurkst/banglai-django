@@ -4,10 +4,37 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib.auth.forms import UserCreationForm
 
+
+def hello(request, name):
+    msg = "Hello {}, how are you?".format(name)
+    return HttpResponse(msg)
+
+
+def show_page(request, page_no):
+    msg = "Page No: {}".format(page_no)
+    return HttpResponse(msg)
+
+
 def user_signup(request):
     form = UserCreationForm()
     return render(request, 'signup.html',{'signup_form':form})
 
+
+# store demo users data
+user = {
+    'user_name': 'harun',
+    'password': 'password123'
+}
+
+
+def check_user(request, username, password):
+    if user['user_name'] == username:
+        if user['password'] == password:
+            return HttpResponse("Logged in successfully")
+        else:
+            return HttpResponse("Incorrect password! Try again.")
+    else:
+        return HttpResponse("Invalid username")
 
 
 def user_login(request):
